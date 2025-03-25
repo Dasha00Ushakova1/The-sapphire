@@ -74,6 +74,17 @@
             background-color: #0056b3;
             transform: translateY(-2px);
         }
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none; /* Скрыто по умолчанию */
+            transition: opacity 0.5s;
+        }
         footer {
             text-align: center;
             padding: 20px;
@@ -117,50 +128,64 @@
     <main class="container">
         <div class="product">
             <img src="изображение1.jpg" alt="Ювелирное изделие 1">
-            <h2>Ювелирное изделие 1</h2>
+                        <h2>Ювелирное изделие 1</h2>
             <p>Цена: 5000 руб.</p>
-            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+            <button class="add-to-cart" onclick="addToCart('Ювелирное изделие 1')">Добавить в корзину</button>
         </div>
         <div class="product">
             <img src="изображение2.jpg" alt="Ювелирное изделие 2">
             <h2>Ювелирное изделие 2</h2>
-                        <p>Цена: 7000 руб.</p>
-            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+            <p>Цена: 7000 руб.</p>
+            <button class="add-to-cart" onclick="addToCart('Ювелирное изделие 2')">Добавить в корзину</button>
         </div>
         <div class="product">
             <img src="изображение3.jpg" alt="Ювелирное изделие 3">
             <h2>Ювелирное изделие 3</h2>
             <p>Цена: 3000 руб.</p>
-            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+            <button class="add-to-cart" onclick="addToCart('Ювелирное изделие 3')">Добавить в корзину</button>
         </div>
         <div class="product">
             <img src="изображение4.jpg" alt="Ювелирное изделие 4">
             <h2>Ювелирное изделие 4</h2>
             <p>Цена: 8000 руб.</p>
-            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+            <button class="add-to-cart" onclick="addToCart('Ювелирное изделие 4')">Добавить в корзину</button>
         </div>
         <div class="product">
             <img src="изображение5.jpg" alt="Ювелирное изделие 5">
             <h2>Ювелирное изделие 5</h2>
             <p>Цена: 4500 руб.</p>
-            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+            <button class="add-to-cart" onclick="addToCart('Ювелирное изделие 5')">Добавить в корзину</button>
         </div>
         <div class="product">
             <img src="изображение6.jpg" alt="Ювелирное изделие 6">
             <h2>Ювелирное изделие 6</h2>
             <p>Цена: 6500 руб.</p>
-            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+            <button class="add-to-cart" onclick="addToCart('Ювелирное изделие 6')">Добавить в корзину</button>
         </div>
     </main>
+    <div class="notification" id="notification"></div>
     <footer>
         <p>&copy; 2025 Ювелирный магазин Ушаковой Дарьи. Все права защищены.</p>
     </footer>
     <script>
         let cartCount = 0;
-        function addToCart() {
+        function addToCart(productName) {
             cartCount++;
             document.getElementById('cart-count').innerText = cartCount;
-            alert("Товар добавлен в корзину!");
+            showNotification(`${productName} добавлено в корзину!`);
+        }
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.innerText = message;
+            notification.style.display = 'block';
+            notification.style.opacity = 1;
+            // Скрываем уведомление через 3 секунды
+            setTimeout(() => {
+                notification.style.opacity = 0;
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 500); // Время, необходимое для завершения анимации
+            }, 3000);
         }
     </script>
 </body>
