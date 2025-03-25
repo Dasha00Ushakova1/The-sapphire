@@ -1,4 +1,3 @@
-
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -119,18 +118,18 @@
     <header>
         <h1>Ювелирный магазин</h1>
         <nav>
-            <a href="#">Главная</a>
+            <a href="2part.html">Главная</a>
             <a href="#">О нас</a>
             <a href="#">Контакты</a>
-            <a href="#">Корзина (<span id="cart-count">0</span>)</a>
+            <a href="Korzina.html">Корзина (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
     <main class="container">
         <div class="product">
             <img src="изображение1.jpg" alt="Ювелирное изделие 1">
-                        <h2>Ювелирное изделие 1</h2>
+            <h2>Ювелирное изделие 1</h2>
             <p>Цена: 5000 руб.</p>
-            <button class="add-to-cart" onclick="addToCart('Ювелирное изделие 1')">Добавить в корзину</button>
+                        <button class="add-to-cart" onclick="addToCart('Ювелирное изделие 1')">Добавить в корзину</button>
         </div>
         <div class="product">
             <img src="изображение2.jpg" alt="Ювелирное изделие 2">
