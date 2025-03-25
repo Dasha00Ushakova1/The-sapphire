@@ -17,6 +17,7 @@
             color: white;
             padding: 15px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         nav {
             margin: 15px 0;
@@ -43,15 +44,16 @@
             padding: 10px;
             text-align: center;
             background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            flex: 1 1 300px; /* Добавлено для ПК-версии */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1 1 300px; /* Для ПК-версии */
         }
         .product:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .product img {
-            width: 100%; /* Изменено для адаптивности */
+            width: 100%; /* Адаптивные изображения */
             height: auto;
             border-radius: 5px;
             transition: transform 0.3s;
@@ -85,6 +87,20 @@
             .product {
                 flex: 1 1 100%; /* На маленьких экранах товары занимают всю ширину */
             }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+        }
+        @media (min-width: 601px) {
+            nav {
+                display: flex;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -108,7 +124,7 @@
         <div class="product">
             <img src="изображение2.jpg" alt="Ювелирное изделие 2">
             <h2>Ювелирное изделие 2</h2>
-            <p>Цена: 7000 руб.</p>
+                        <p>Цена: 7000 руб.</p>
             <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
         </div>
         <div class="product">
@@ -117,8 +133,7 @@
             <p>Цена: 3000 руб.</p>
             <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
         </div>
-        <!-- Добавьте больше товаров по необходимости -->
-           <div class="product">
+        <div class="product">
             <img src="изображение4.jpg" alt="Ювелирное изделие 4">
             <h2>Ювелирное изделие 4</h2>
             <p>Цена: 8000 руб.</p>
