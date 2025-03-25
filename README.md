@@ -118,8 +118,8 @@
     <header>
         <h1>Ювелирный магазин</h1>
         <nav>
-            <a href="2part.html">Главная</a>
-            <a href="#">О нас</a>
+            <a href="">Главная</a>
+            <a href="2part.html">О нас</a>
             <a href="#">Контакты</a>
             <a href="Korzina.html">Корзина (<span id="cart-count">0</span>)</a>
         </nav>
