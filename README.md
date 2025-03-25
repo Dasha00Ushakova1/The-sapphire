@@ -13,7 +13,7 @@
     </header>
     <nav>
             <a href="README.md">Главная</a>
-            <a href="2part.html">О нас</a>
+            <a href="about.html">О нас</a>
             <a href="contact.html">Контакты</a>
             <a href="Korzina.html">Корзина (<span id="cart-count">0</span>)</a>
         </nav>
