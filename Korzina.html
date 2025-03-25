@@ -1,0 +1,153 @@
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Ювелирный магазин</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #4a4a4a;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            margin: 15px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #4a4a4a;
+            color: white;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .checkout-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .checkout-button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4a4a4a;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Корзина</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+            <a href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Ваши товары</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Название товара</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                    <th>Итого</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Здесь будут добавляться товары из корзины -->
+            </tbody>
+        </table>
+        <div class="total" id="total-price">Общая сумма: 0 руб.</div>
+        <button class="checkout-button" onclick="checkout()">Оформить заказ</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 Ювелирный магазин Ушаковой Дарьи. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Пример данных о товарах в корзине
+        const cart = [
+            { name: "Ювелирное изделие 1", price: 5000, quantity: 1 },
+            { name: "Ювелирное изделие 2", price: 7000, quantity: 2 },
+            { name: "Ювелирное изделие 3", price: 3000, quantity: 1 },
+        ];                    <td>${item.price} руб.</td>
+                    <td>${item.quantity}</td>
+                    <td>${totalItemPrice} руб.</td>
+                `;
+                cartItemsContainer.appendChild(row);
+            });
+
+            document.getElementById('total-price').innerText = `Общая сумма: ${total} руб.`;
+            document.getElementById('cart-count').innerText = cart.length;
+        }
+
+        function checkout() {
+            alert("Переход к оформлению заказа!");
+            // Здесь можно добавить логику для оформления заказа
+        }
+
+        // Загружаем корзину при загрузке страницы
+        window.onload = loadCart;
+    </script>
+</body>
+</html>
+
+
+        function loadCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            let total = 0;
+
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                const totalItemPrice = item.price * item.quantity;
+                total += totalItemPrice;
+
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.price} руб
