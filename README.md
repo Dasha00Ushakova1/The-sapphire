@@ -120,7 +120,7 @@
         <nav>
             <a href="">Главная</a>
             <a href="2part.html">О нас</a>
-            <a href="#">Контакты</a>
+            <a href="contacs.html">Контакты</a>
             <a href="Korzina.html">Корзина (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
