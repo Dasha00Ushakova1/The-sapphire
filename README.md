@@ -1,3 +1,4 @@
+
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -24,6 +25,10 @@
             margin: 0 15px;
             color: white;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ddd;
         }
         .container {
             display: flex;
@@ -39,22 +44,32 @@
             text-align: center;
             background-color: white;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
         }
         .product img {
             width: 200px; /* Размер изображения товара */
             height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .product img:hover {
+            transform: scale(1.1);
         }
         .add-to-cart {
             background-color: #007bff;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 10px 15px;
             cursor: pointer;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .add-to-cart:hover {
             background-color: #0056b3;
+            transform: translateY(-2px);
         }
         footer {
             text-align: center;
@@ -64,6 +79,11 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        @media (max-width: 600px) {
+            .product {
+                flex: 1 1 100%; /* На маленьких экранах товары занимают всю ширину */
+            }
         }
     </style>
 </head>
@@ -77,7 +97,7 @@
             <a href="#">Корзина (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
-    <div class="container">
+    <main class="container">
         <div class="product">
             <img src="пользователь должен сам выбрать изображение" alt="Ювелирное изделие 1">
             <h2>Ювелирное изделие 1</h2>
@@ -92,12 +112,12 @@
         </div>
         <div class="product">
             <img src="пользователь должен сам выбрать изображение" alt="Ювелирное изделие 3">
-            <h2>Ювелирное изделие 3</h2>
+                        <h2>Ювелирное изделие 3</h2>
             <p>Цена: 3000 руб.</p>
             <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
         </div>
         <!-- Добавьте больше товаров по необходимости -->
-    </div>
+    </main>
     <footer>
         <p>&copy; 2023 Ювелирный магазин. Все права защищены.</p>
     </footer>
@@ -111,3 +131,4 @@
     </script>
 </body>
 </html>
+
