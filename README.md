@@ -45,12 +45,13 @@
             background-color: white;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            flex: 1 1 300px; /* Добавлено для ПК-версии */
         }
         .product:hover {
             transform: scale(1.05);
         }
         .product img {
-            width: 200px; /* Размер изображения товара */
+            width: 100%; /* Изменено для адаптивности */
             height: auto;
             border-radius: 5px;
             transition: transform 0.3s;
@@ -99,24 +100,42 @@
     </header>
     <main class="container">
         <div class="product">
-            <img src="пользователь должен сам выбрать изображение" alt="Ювелирное изделие 1">
+            <img src="изображение1.jpg" alt="Ювелирное изделие 1">
             <h2>Ювелирное изделие 1</h2>
             <p>Цена: 5000 руб.</p>
             <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
         </div>
         <div class="product">
-            <img src="пользователь должен сам выбрать изображение" alt="Ювелирное изделие 2">
+            <img src="изображение2.jpg" alt="Ювелирное изделие 2">
             <h2>Ювелирное изделие 2</h2>
             <p>Цена: 7000 руб.</p>
             <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
         </div>
         <div class="product">
-            <img src="пользователь должен сам выбрать изображение" alt="Ювелирное изделие 3">
-                        <h2>Ювелирное изделие 3</h2>
+            <img src="изображение3.jpg" alt="Ювелирное изделие 3">
+            <h2>Ювелирное изделие 3</h2>
             <p>Цена: 3000 руб.</p>
             <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
         </div>
         <!-- Добавьте больше товаров по необходимости -->
+           <div class="product">
+            <img src="изображение4.jpg" alt="Ювелирное изделие 4">
+            <h2>Ювелирное изделие 4</h2>
+            <p>Цена: 8000 руб.</p>
+            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <img src="изображение5.jpg" alt="Ювелирное изделие 5">
+            <h2>Ювелирное изделие 5</h2>
+            <p>Цена: 4500 руб.</p>
+            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <img src="изображение6.jpg" alt="Ювелирное изделие 6">
+            <h2>Ювелирное изделие 6</h2>
+            <p>Цена: 6500 руб.</p>
+            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 Ювелирный магазин. Все права защищены.</p>
