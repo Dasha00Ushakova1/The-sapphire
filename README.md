@@ -12,7 +12,7 @@
         <h1>Добро пожаловать в наш магазин!</h1>
     </header>
     <nav>
-            <a href="">Главная</a>
+            <a href="README.md">Главная</a>
             <a href="2part.html">О нас</a>
             <a href="contact.html">Контакты</a>
             <a href="Korzina.html">Корзина (<span id="cart-count">0</span>)</a>
