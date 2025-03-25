@@ -97,19 +97,12 @@
 
     <main class="container">
         <section id="contact-form">
-            <h2>Форма обратной связи</h2>
-            <form action="/submit-form" method="post">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Электронная почта:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Сообщение:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Отправить</button>
-            </form>
+             <h2>Форма обратной связи</h2>
+        <input type="text" id="name" placeholder="Ваше имя" required>
+        <input type="email" id="email" placeholder="Ваш Email" required>
+        <textarea id="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+        <button id="send-feedback">Отправить</button>
+        <p id="feedback-message">Ваше сообщение принято! Скоро мы на него ответим.</p>
         </section>
 
         <section id="contact-info">
