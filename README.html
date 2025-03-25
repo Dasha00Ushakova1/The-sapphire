@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница магазина</title>
+    <title>Контакты - Магазин</title>
     <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS для стилей -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Подключение иконок Font Awesome -->
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать в наш магазин!</h1>
+        <h1>Контакты</h1>
     </header>
     <nav>
-            <a href="README.md">Главная</a>
-            <a href="about.html">О нас</a>
-            <a href="contact.html">Контакты</a>
-            <a href="Korzina.html">Корзина (<span id="cart-count">0</span>)</a>
-        </nav>
-    <section id="about">
-        <h2>Общее описание магазина</h2>
-        <p>Наш магазин предлагает широкий ассортимент товаров, которые помогут вам сделать вашу жизнь лучше. Наша миссия - предоставить качественные продукты по доступным ценам, а наши ценности - это честность, качество и забота о клиентах.</p>
+        <a href="README.md">Главная</a>
+        <a href="about.html">О нас</a>
+        <a href="contact.html">Контакты</a>
+        <a href="Korzina.html">Корзина (<span id="cart-count">0</span>)</a>
+    </nav>
+    <section id="contact-form">
+        <h2>Форма обратной связи</h2>
+        <form action="/submit-form" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
     </section>
-    <section id="special-offers">
-        <h2>Специальные предложения</h2>
-        <p>Не пропустите наши акции! Скидки до 50% на избранные товары. Узнайте больше на странице акций!</p>
-    </section>
-    <section id="customer-reviews">
-        <h2>Отзывы клиентов</h2>
-        <blockquote>
-            <p>«Отличный магазин! Быстрая доставка и качественные товары.» - Анна</p>
-        </blockquote>
-        <blockquote>
-            <p>«Я всегда нахожу здесь то, что мне нужно. Рекомендую!» - Сергей</p>
-        </blockquote>
+    <section id="contact-info">
+        <h2>Контактная информация</h2>
+        <p>Адрес: ул. Примерная, 123, г. Москва, Россия</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Электронная почта: info@example.com</p>
     </section>
     <footer>
         <h2>Следите за нами в социальных сетях</h2>
