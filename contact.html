@@ -52,6 +52,7 @@
         }
         label {
             margin: 10px 0 5px;
+            align-self: flex-start;
         }
         input, textarea {
             width: 80%;
@@ -81,12 +82,17 @@
             bottom: 0;
             width: 100%;
         }
+        #feedback-message {
+            display: none; /* Скрыть сообщение по умолчанию */
+            margin-top: 15px;
+            color: #4CAF50;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Контакты</h1>
-       <nav>
+        <nav>
             <a href="README.html">Главная</a>
             <a href="index.html">Каталог</a>
             <a href="about.html">О нас</a>
@@ -97,12 +103,20 @@
 
     <main class="container">
         <section id="contact-form">
-             <h2>Форма обратной связи</h2>
-        <input type="text" id="name" placeholder="Ваше имя" required>
-        <input type="email" id="email" placeholder="Ваш Email" required>
-        <textarea id="message" rows="4" placeholder="Ваше сообщение" required></textarea>
-        <button id="send-feedback">Отправить</button>
-        <p id="feedback-message">Ваше сообщение принято! Скоро мы на него ответим.</p>
+            <h2>Форма обратной связи</h2>
+            <form id="feedback-form">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                
+                <label for="email">Ваш Email:</label>
+                <input type="email" id="email" placeholder="Ваш Email" required>
+                
+                <label for="message">Ваше сообщение:</label>
+                <textarea id="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+                
+                <button type="submit">Отправить</button>
+                <p id="feedback-message">Ваше сообщение принято! Скоро мы на него ответим.</p>
+            </form>
         </section>
 
         <section id="contact-info">
@@ -113,21 +127,30 @@
         </section>
 
         <section id="map">
-            <h2>Карта</h2>
+                        <h2>Карта</h2>
             <p>Здесь будет интерактивная карта с указанием местоположения магазина.</p>
+            <!-- Вы можете вставить код для интерактивной карты, например, с использованием Google Maps API -->
         </section>
 
         <section id="working-hours">
             <h2>Часы работы</h2>
             <p>Понедельник - Пятница: 10:00 - 20:00</p>
             <p>Суббота: 11:00 - 18:00</p>
-                       <p>Воскресенье: Выходной</p>
+            <p>Воскресенье: Выходной</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ювелирный магазин Ушаковой Дарьи. Все права защищены.</p>
+        <p>&copy; 2023 Ювелирный магазин. Все права защищены.</p>
     </footer>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы
+            document.getElementById('feedback-message').style.display = 'block'; // Показываем сообщение
+            this.reset(); // Сбрасываем форму
+        });
+    </script>
 </body>
 </html>
 
