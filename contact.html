@@ -3,52 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS для стилей -->
+    <title>Контакты - Ювелирный магазин</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #4a4a4a;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            margin: 15px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4a4a4a;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4a4a4a;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Контакты</h1>
-    <nav>
+    <header>
+        <h1>Контакты</h1>
+        <nav>
             <a href="README.md">Главная</a>
             <a href="index.html">Каталог</a>
             <a href="about.html">О нас</a>
             <a href="contact.html">Контакты</a>
             <a href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
         </nav>
+    </header>
 
-    <section id="contact-form">
-        <h2>Форма обратной связи</h2>
-        <form action="/submit-form" method="post">
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" required>
+    <main class="container">
+        <section id="contact-form">
+            <h2>Форма обратной связи</h2>
+            <form action="/submit-form" method="post">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Электронная почта:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="message">Сообщение:</label>
-            <textarea id="message" name="message" required></textarea>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
 
-    <section id="contact-info">
-        <h2>Контактная информация</h2>
-        <p>Адрес: ул. Примерная, 123, г. Москва, Россия</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-        <p>Электронная почта: info@example.com</p>
-    </section>
+        <section id="contact-info">
+            <h2>Контактная информация</h2>
+            <p>Адрес: ул. Примерная, 123, г. Москва, Россия</p>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>Электронная почта: info@example.com</p>
+        </section>
 
-    <section id="map">
-        <h2>Карта</h2>
-        <p>Здесь будет интерактивная карта с указанием местоположения магазина.</p>
-    </section>
+        <section id="map">
+            <h2>Карта</h2>
+            <p>Здесь будет интерактивная карта с указанием местоположения магазина.</p>
+        </section>
 
-    <section id="working-hours">
-        <h2>Часы работы</h2>
-        <p>Понедельник - Пятница: 10:00 - 20:00</p>
-        <p>Суббота: 11:00 - 18:00</p>
-        <p>Воскресенье: Выходной</p>
-    </section>
+        <section id="working-hours">
+            <h2>Часы работы</h2>
+            <p>Понедельник - Пятница: 10:00 - 20:00</p>
+            <p>Суббота: 11:00 - 18:00</p>
+                       <p>Воскресенье: Выходной</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ювелирный магазин Ушаковой Дарьи. Все права защищены.</p>
+    </footer>
 </body>
 </html>
+
